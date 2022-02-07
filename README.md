@@ -10,7 +10,7 @@ All his code it's [here](https://github.com/jonmircha/youtube-js)
 
 ## What are you going to see ?
 
-- Learn JavaScript
+- [Learn JavaScript](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/learn_js)
 
 ---
 
@@ -20,7 +20,7 @@ All his code it's [here](https://github.com/jonmircha/youtube-js)
 
 ---
 
-:tv: You can see the practise [HERE](https://eugenia1984.github.io/js-exercises2/)
+:tv: You can see the practise [HERE](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/)
 
 ---
 
@@ -56,7 +56,8 @@ Todo el código del curso está [acá](https://github.com/jonmircha/youtube-js)
 
 ##  Qué vas a ver?
 
-- Aprende JavaScript
+- [Aprende JavaScript](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/learn_js)
+
 ---
 
 ## Stack teconológico 🛠️
@@ -65,7 +66,7 @@ Todo el código del curso está [acá](https://github.com/jonmircha/youtube-js)
 
 ---
 
-:tv: Podes ver la práctica [ACA](https://eugenia1984.github.io/js-exercises2/)
+:tv: Podes ver la práctica [ACA](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/)
 
 ---
 

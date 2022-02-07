@@ -33,6 +33,23 @@ EsNext ... y así sucesivamente
 
 Hoy JS es el único lenguaje capaz de ejecutarse en las 3 capas de una app: FrontEnd (JS), BackEnd (Node.js) y Persistencia de datos (MongoDB, Couch DB, Firebase, etc).
 
+Con JavaScript puedes:
+
+Diseño y Desarrollo Web.
+
+Hacer Videojuegos.
+
+Experiencias 3D, Realidad Aumentada, Realidad Virtual.
+
+Controlar Hardware (drones, robots, electrodomésticos, wearables, etc).
+
+Aplicaciones Híbridas y Móviles.
+
+Aprendizaje Automático.
+
+
+
+
 
 ### JS no es Java
 
@@ -194,3 +211,7 @@ function () {}
 Class {}
 
 --
+
+[Artículo: ¿Qué es ECMAScript?](https://jonmircha.com/ecmascript)
+
+---
