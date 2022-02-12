@@ -12,6 +12,8 @@ All his code it's [here](https://github.com/jonmircha/youtube-js)
 
 - [Learn JavaScript](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/learn_js)
 
+- [Type of data](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/tipo_de_datos)
+
 ---
 
 ## Tech Stack 🛠️
@@ -57,6 +59,8 @@ Todo el código del curso está [acá](https://github.com/jonmircha/youtube-js)
 ##  Qué vas a ver?
 
 - [Aprende JavaScript](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/learn_js)
+
+- [Tipo de datos](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/tipo_de_datos)
 
 ---
 

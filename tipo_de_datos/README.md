@@ -201,3 +201,38 @@ console.log(ul3);
 ```
 
 ---
+
+## Numbers
+
+```JavaScript
+let a = 2;
+let b = new Number(1);  // con el constructor
+```
+
+Algunos métodos son:
+
+```JavaScript
+let c = 7.19;
+let d = "5.6";
+console.log(a, b);
+console.log(c.toFixed(1));  //Me redondea a la cantidad de decimales que especifico entre ()
+console.log(c.toFixed(5));
+console.log(parseInt(c));  //Me devuelve solo la parte entera. Se utiliza para convertir a Number lo que se ingresa como input en un form que ingresa como String
+console.log(parseFloat(c));  // Me devuelve la parte entera y la flotante
+console.log(typeof c, typeof d);
+console.log(a + b);
+console.log(c + parseInt(d));  // Si no usaba el paseInt me iba a concatenar el number con la String 5.6. Por eso CASTEO para SUMAR. Pero me va a sumar los enteros y dar inexacta la parte decimal -es mejor usar librerias o el ParseFloat-
+console.log(c + parseFloat(d));  //Si no usaba el parseFloat me concatenaba, por eso necesito CASTEAR para poder SUMAR
+```
+
+
+Los métodos **parseInt()** y **parseFloat()** cuelgan del contructor, del objeto **Number**. Son métodos directos del constructor Number.
+
+```JavaScript
+console.log(c + Number.parseInt(d));
+console.log(c + Number.parseFloat(d));
+```
+
+---
+
+## Booleanos
