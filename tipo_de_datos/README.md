@@ -309,3 +309,103 @@ console.log(noEsUnNumero);
 ```
 
 ---
+
+# :start: Objetos complejos
+
+## Funciones
+
+
+ Funciones - #jonmircha     ********** */
+
+
+Una función es un bloque de código, autocontenido, que se puede definir una vez y ejecutar en cualquier momento. 
+
+Opcionalmente, una función puede aceptar parámetros y devolver un valor.
+
+Las funciones en JavaScript son **objetos**, un tipo especial de objetos:
+
+Se dice que las funciones son **ciudadanos de primera clase** porque *pueden asignarse a un valor*, y *pueden pasarse como argumentos* y *usarse como un valor de retorno*.
+
+
+- Declaración de función declarada: con la palabra reservada **function**, lleva un nombre y entre los {} la línea de código que se ejecutará al invocar la función.
+
+```JavaScript
+function estoEsUnaFuncion() {
+  console.log("Uno");
+  console.log("Dos");
+  console.log("Tres");
+} 
+```
+
+
+- Invocación de función
+  
+```JavaScript
+estoEsUnaFuncion();
+estoEsUnaFuncion();
+estoEsUnaFuncion();
+estoEsUnaFuncion(); 
+```
+
+
+Declaro la función unaFuncionQueDevuelveValor :
+
+```JavaScript
+function unaFuncionQueDevuelveValor() {
+  console.log("Uno");
+  return 19;
+  console.log("Dos");
+  console.log("Tres");
+  return "La función ha retornado una Cadena de texto";
+} 
+```
+
+Asigno la función unaFuncionQueDevuelveValor a una variable:
+
+```JavaScript
+let valorDeFuncion = unaFuncionQueDevuelveValor();
+
+console.log(valorDeFuncion);
+``` 
+
+Por consola voy a ver:
+
+Uno
+
+19
+
+Al tener la palabra return me retorna el 19 e ignora todas las líneas de código que están debajo
+
+
+- Una función puede aceptar parámetros, es decir, puede recibir valores por defecto (los mismos pueden tener un valor inicializado para luego no tener algún undefined).
+
+```JavaScript
+function saludar(nombre = "Desconocido", edad = 0) {
+   console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+} 
+
+```JavaScript
+ añossaludar("kEnAi", 7); // Hola mi nombre es KenAi y tengo 
+saludar();  // Hola mo nimbre es Desconocido y tengo  años
+```
+
+- Funciones declaradas VS funciones expresadas
+
+```JavaScript
+funcionDeclarada();
+
+function funcionDeclarada() {
+  console.log("Esto es un función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada");
+} 
+
+funcionDeclarada();
+
+funcionExpresada();
+
+//función anónima
+const funcionExpresada = function () {
+  console.log("Esto es una función expresada, es decir, una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá 'Cannot access 'funcionExpresada' before initialization'")
+} 
+
+funcionExpresada();
+```
