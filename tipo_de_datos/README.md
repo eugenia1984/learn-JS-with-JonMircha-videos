@@ -236,3 +236,76 @@ console.log(c + Number.parseFloat(d));
 ---
 
 ## Booleanos
+
+Los posibles valores son: **true** o **false**.
+
+```JavaScript
+let verdadero = true;
+let falso = false;
+let v = Boolean(true);
+let f = Boolean(false);
+console.log(verdadero, falso, v, f);
+console.log(typeof verdadero, typeof falso);  // boolean boolean
+```
+
+**Truthy** : expresiones que tienden a verdadero
+```JavaScript
+if(true)
+if({})
+if([])
+if(42)
+if("foo")
+if(new Date())
+if(-42)
+if(-3.4)
+if(Infinity)
+if(-Infinity)
+```
+
+**Falsy** : expresiones que tienden a falso
+```JavaScript
+if(false)
+if(null)
+if(undefined)
+if(0)
+if(NaN)
+if('')
+if("")
+if(document.all){1}  // un nodo no existente
+```
+
+
+```JavaScript
+console.log(Boolean(0));   // 0 e tiende a falso
+console.log(Boolean(-7));  // un numero negativo tiene a verdadero (porque está inicializado)
+console.log(Boolean(""));  // Un String vacio tiende a falso
+console.log(Boolean(" "));   //Un String con al menos un caracter tiende a verdadero
+```
+
+## Undefined, null & NaN 
+
+Undefined y null representan un valor ausente, una variable que no tiene valor, pero undefined es una variable que no fue inicializada.
+
+**Undefined** indica que no se ha inicializado una variable y que el valor está ausente.
+
+```JavaScript
+
+let indefinida;
+console.log(indefinida); 
+```
+
+**null** es un valor especial que indica la ausencia de un valor, es un valor intensionamente asignado por el programador.
+
+```JavaScript
+let nulo = null
+console.log(null);
+```
+
+**NaN** - Not a Number
+
+```JavaScript
+let noEsUnNumero = "hola" * 3.7;
+console.log(noEsUnNumero); 
+```
+
+---
