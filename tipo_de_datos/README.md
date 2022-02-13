@@ -410,32 +410,144 @@ Es muy buena práctica utilizar funciones expresadas.
 
 ## Arreglos (Arrays)
 
+Se declaran entre corchetes **[]**.
+
+Se los puede declarar tanto con **let** como con **conts**.
+
+Forma de declarar un array:
 
 ```JavaScript
 const a = [];
 const b = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
-console.log(a);
-console.log(b);
-console.log(b.length);
-console.log(b[2]);
-console.log(b[0]);
-console.log(b[3]);
-console.log(b[3][2]);
-console.log(b[3][3][0]);
+```
+
+El array es **una colección de elementos** y los elementos pueden ser de distintos tipos, como el array **b**.
+
+```JavaScript
+console.log(a);  //[]
+console.log(b);  // [1, true, "Hola", Arrays(3)]
+```
+
+Tiene su propiedad **length**, que me indica la cantidad de elementos que tiene el array, me devuelve la longitud.
+
+- Recordar que siempre comienza con el índica 0.
+
+```JavaScript
+console.log(b.length);  //4
+```
+
+Para acceder a un elemento (recuerdo que siempre va a tener su posición con un número anterior al del elemento)
+
+```JavaScript
+console.log(b[2]);  // Hola
+console.log(b[0]);  // 1
+console.log(b[3]);  // (3) ["A", "B", "c"]
+```
+
+Y para acceder al elemento dentro del arreglo que está dentro de **b** debo indicar las dos posiciones, la dle array y la del elamento dentro del mismo
+
+```JavaScript
+console.log(b[3][2]); // "C"
+```
+Y en el caso que dentor del array general tnego un array dentro y el mismo tiene otro adentro:
+
+```JavaScript
+console.log(b[3][3][0]); // 1
+```
+Nueva forma de crear un array, con el método **Array.of()**, y accedo al prototipo Array:
+
+```JavaScript
 const c = Array.of("X", "Y", "Z", 9, 8, 7);
 console.log(c);
+```
+
+Si quiero inicializar un array ya con un valor booleano, puedo utilizar el método **.fill()** con 100 posivciones, por eso utilizo ```JavaScript Array(100)````.
+
+```JavaScript
 const d = Array(100).fill(false);
-console.log(d);
-const e = new Array();
-console.log(e);
+```
+
+Una forma de crear un array, que ya entró en desuso (no se utiliza más), es con el constructor:
+```JavaScript
+const e = new Array();  // [] va a ser un array vacío
+```
+
+Y si le querría asignar valores, sería así (igua recordar que ya no se utiliza de este modo):
+```JavaScript
 const f = new Array(1, 2, 3, true, false);
-console.log(f);
+```
+
+Métodos del array, hay muchos, pero acá solo nombramos dos:
+
+```JavaScript
 const colores = ["Rojo", "Verde", "Azul"];
-console.log(colores);
-colores.push("Negro");
-console.log(colores);
-colores.pop();
-console.log(colores);
+
+// Con .push() AGREGO un eleento al FINAL
+colores.push("Negro");  //  ["Rojo", "Verde", "Azul", "Negro"]
+
+// Con .pop() quito el ÚLTIMO elemento
+colores.pop();  //  ["Rojo", "Verde", "Azul"]
+```
+
+Hay un método funcional de los arreglos, que me permite ejecutar una función por cada elemento del mismo.
+
+Por ejemplo voy a crear una lista y por cada **li** tenga un color, y si necesitaría que cada uno tenga una posición única con el index le agrego el número de id:
+
+```JavaScript
 colores.forEach(function (el, index) {
   console.log(`<li id="${index}">${el}</li>`);
 ```
+
+---
+
+## Objetos
+
+```JavaScript
+ let a = new String("Hola");
+//console.log(a)
+const b = {}
+console.log(b);
+const c = new Object();
+console.log(c);
+ ```
+Dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las funciones se les llama métodos 
+
+```JavaScript    
+  const jon = {
+  nombre: "Jon",
+  apellido: "MirCha",
+  edad: 35,
+  pasatiempos: ["Correr", "Hacer ejercicio", "Dar clases"],
+  soltero: false,
+  contacto: {
+    email: "jonmircha@gmail.com",
+    twitter: "@jonmircha",
+    movil: "5215512345678"
+},
+saludar: function () {
+  console.log(`Hola :)`)
+},
+decirMiNombre: function () {
+  console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir como ${this.contacto.twitter} en twitter.`)
+}
+}
+console.log(jon);
+console.log(jon["nombre"]);
+console.log(jon["apellido"]);
+console.log(jon.nombre);
+console.log(jon.apellido);
+console.log(jon.edad);
+console.log(jon.soltero);
+console.log(jon.pasatiempos);
+console.log(jon.pasatiempos[1]);
+console.log(jon.contacto);
+console.log(jon.contacto.twitter);
+jon.saludar();
+jon.decirMiNombre();
+console.log(Object.keys(jon));
+console.log(Object.values(jon));
+console.log(jon.hasOwnProperty("nombre"));
+console.log(jon.hasOwnProperty("nacimiento"));
+```
+
+---
