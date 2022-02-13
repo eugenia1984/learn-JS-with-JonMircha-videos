@@ -391,21 +391,51 @@ saludar();  // Hola mo nimbre es Desconocido y tengo  años
 
 - Funciones declaradas VS funciones expresadas
 
+
+**Función declarada** -> puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada . Hay **hoisting** de la función, es decir me la eleva al principio, donde declaro 1ro variables y luego funciones.
+
+Si somos ordenados y tenemos el cósigo ordenado
+
+1- variables
+
+2- funciones
+
+No vamos a tener problemas de hoisting.
+
+**Función expresada** -> una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá 'Cannot access 'funcionExpresada' before initialization ( porque no va a poder ser llamada, ya que no fue inicializada). Se utiliza **const** para asinarle la función anónima (sin nombre) y también con **arrow function**.
+
+Es muy buena práctica utilizar funciones expresadas.
+
+---
+
+## Arreglos (Arrays)
+
+
 ```JavaScript
-funcionDeclarada();
-
-function funcionDeclarada() {
-  console.log("Esto es un función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada");
-} 
-
-funcionDeclarada();
-
-funcionExpresada();
-
-//función anónima
-const funcionExpresada = function () {
-  console.log("Esto es una función expresada, es decir, una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá 'Cannot access 'funcionExpresada' before initialization'")
-} 
-
-funcionExpresada();
+const a = [];
+const b = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
+console.log(a);
+console.log(b);
+console.log(b.length);
+console.log(b[2]);
+console.log(b[0]);
+console.log(b[3]);
+console.log(b[3][2]);
+console.log(b[3][3][0]);
+const c = Array.of("X", "Y", "Z", 9, 8, 7);
+console.log(c);
+const d = Array(100).fill(false);
+console.log(d);
+const e = new Array();
+console.log(e);
+const f = new Array(1, 2, 3, true, false);
+console.log(f);
+const colores = ["Rojo", "Verde", "Azul"];
+console.log(colores);
+colores.push("Negro");
+console.log(colores);
+colores.pop();
+console.log(colores);
+colores.forEach(function (el, index) {
+  console.log(`<li id="${index}">${el}</li>`);
 ```
