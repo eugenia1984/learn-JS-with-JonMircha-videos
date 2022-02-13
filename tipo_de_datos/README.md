@@ -605,13 +605,121 @@ console.log(Object.values(euge));
 
 ```JavaScript
 console.log(euge.hasOwnProperty("nombre"));  // true, porque tiene nombre como propiedad
-console.log(euge.hasOwnProperty("nacimiento"));  // false, porque no tiene nacimeinto como propiedad
+console.log(euge.hasOwnProperty("nacimiento"));  // false, porque no tiene nacieeinto como propiedad
 ```
 
 ---
 
 # :book: Estructuras de control
 
+---
+## Tipo de operadores
+
+
+### Operadores Aritméticos 
+
+suma: +
+
+resta:  -
+
+multiplicación:  * 
+
+división: / 
+
+módulo:  % 
+
+agrupación: ()  
+
+```JavaScript
+ let a = 5 + (5 - 10) * 3;
+let modulo = 5 % 2;
+console.log(a);
+console.log(modulo);
+```
+
+### Operadores Relacionales: 
+
+mayor que: >
+
+menor que: <
+
+mayor o igual que: >=
+
+menor o igual que: <=
+
+igual que: ==
+
+estrictamente igual que: ===
+
+distinto que: !=
+
+super distinto que:  !==
+
+```JavaSCript
+console.log(8 > 9);  // false
+console.log(9 > 8);  // true
+console.log(8 >= 9);  // false
+console.log(9 >= 8);  // true
+console.log(7 < 7);   //false
+console.log(7 <= 7);   // true
+```
+
+= 1 igual es **asignación**  de *variable*
+
+== 2 iguales es **comparacion** de *valores*
+
+=== 3 iguales es **comparación** de *tipo de dato* y de *valor*
+
+
+Por buena práctica, para comparar siempre utilizar ***====** asi evitamos los truthy y falsy.
+
+```JavaScript
+console.log(7 == 7);  // true
+console.log("7" == 7);  // true
+console.log(0 == false);  //false
+console.log(7 === 7);  // true
+console.log("7" === 7);  // false, porque también comparo el tipo de dato
+console.log(0 === false);  // false
+```
+### Incremento - Decremento
+
+```JavaScript
+let i = 2;
+i +=3;
+console.log(i); // 5
+
+i -=1;
+cosole.log(i); //4
+
+i *= 2;
+console.log(i); // 8
+```
+
+### Operador unario
+
+```JavaSCript
+i++; // 9
+i--;  // 8
+++i; // va a aumentar el alor en uno, pero es mejor utilizar con el orden: variable incremento/decremento, porque utilizando ++i se pueden tener problemas al tiempo de ejecución
+--i; 
+console.log(i); 
+```
+
+### Operadores Lógicos
+
+**!** - **Not** : Niega, es decir lo que es verdadero lo vuelve falso y viceversa
+
+**||** - **Or**: Cuando tengo 2 o más condiciones, con que una se cumpla, es decir sea verdadera, el OR será verdadero.
+
+**&&** - **And**: Cuando tengo 2 o más condiciones, todas tienen que cumplirse, es decir ser verdaderas, para que AND se valide 
+
+```JavaScript
+console.log(!true);  // false
+console.log(!false);  // true
+console.log((9 === 9) || ("9" === 9));  // true || false -> true
+console.log((9 === 9) && ("9" === 9));  // true && false -> false
+console.log((9 === 9) && ("9" === "9"));  // true && true -> true
+```
 
 ---
 
