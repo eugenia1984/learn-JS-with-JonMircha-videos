@@ -502,52 +502,151 @@ colores.forEach(function (el, index) {
 
 ## Objetos
 
+En JS todo es un objeto.
+
+
+Hsta para declarar una variable de tipo String puedo llamar a su prototipo.
+
 ```JavaScript
  let a = new String("Hola");
-//console.log(a)
+// String["Hola]
+//  0: "H"
+//  1: "o"
+//  2: "l"
+//  3:"a"
+//  length: 4
+//  > -proto_ : String
+// [[PrimitiveValue]] : "Hola"
+```
+
+Se puede utilizar tanto **let** como **const** para declararlo como OBJETO, ya que puede cambiar su valor y clave, pero el objeto va a ser siempre el mismo.
+
+Y al declarar el objeto con **conts** evito que otro objeto ocupe la referencia que en memoria tiene mi objeto.
+
+Los objetos se declaran con **{}**.
+
+```JavaScript
 const b = {}
-console.log(b);
+//no es recomendado, pero se pueden crear con el prototipo object
 const c = new Object();
-console.log(c);
+
  ```
-Dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las funciones se les llama métodos 
+
+Dentro de un objeto a las variables se le van a llamar **atributos/propiedades** y a las funciones se les llama **métodos**.
+
+Las propiedades tienen atributos - valor, los valores pueden ser: String, Number, Array, boolean, otro objeto, etc.
 
 ```JavaScript    
-  const jon = {
-  nombre: "Jon",
-  apellido: "MirCha",
-  edad: 35,
-  pasatiempos: ["Correr", "Hacer ejercicio", "Dar clases"],
-  soltero: false,
+  const euge = {
+  nombre: "Maria Eugenia",
+  apellido: "Costa",
+  edad: 36,
+  pasatiempos: ["Correr", "Hacer ejercicio", "Pilates"],
+  soltera: true,
   contacto: {
-    email: "jonmircha@gmail.com",
-    twitter: "@jonmircha",
-    movil: "5215512345678"
-},
-saludar: function () {
-  console.log(`Hola :)`)
-},
-decirMiNombre: function () {
-  console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir como ${this.contacto.twitter} en twitter.`)
+    email: "costamariaeugenia1@gmail.com",
+    linkedin: "maríaeugeniacosta"
+  },
+  saludar: function () {
+    console.log(`Hola :)`)
+  },
+  decirMiNombre: function () {
+    console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir como ${this.contacto.linkedin} en LinkedIn.`)
+  }
 }
-}
-console.log(jon);
-console.log(jon["nombre"]);
-console.log(jon["apellido"]);
-console.log(jon.nombre);
-console.log(jon.apellido);
-console.log(jon.edad);
-console.log(jon.soltero);
-console.log(jon.pasatiempos);
-console.log(jon.pasatiempos[1]);
-console.log(jon.contacto);
-console.log(jon.contacto.twitter);
-jon.saludar();
-jon.decirMiNombre();
-console.log(Object.keys(jon));
-console.log(Object.values(jon));
-console.log(jon.hasOwnProperty("nombre"));
-console.log(jon.hasOwnProperty("nacimiento"));
 ```
+
+
+```JavaScript
+console.log(euge); // me va a imprimir todo el objeto
+```
+
+Par acceder a los valores del objeto, puedo utilizar **dot notation** :
+
+````nombre_de_mi_objeto.propiedad```
+
+```JavaScript
+console.log(euge["nombre"]);
+console.log(euge["apellido"]);
+console.log(euge.nombre);
+console.log(euge.apellido);
+console.log(euge.edad);
+console.log(euge.soltero);
+console.log(euge.pasatiempos);
+console.log(euge.pasatiempos[1]);
+console.log(euge.contacto);
+console.log(euge.contacto.linkedin);
+```
+
+Para acceder a los métodos del objeto:
+
+```JavaScript
+euge.saludar();  // En este método utilizo .this(), para el contexto en que me encuentro, para hacer refernecia al mismo objeto euge
+```
+
+```JavaScript
+euge.decirMiNombre();
+```
+
+Métodos del objeto:
+
+**.keys()** para listar las llaves del objeto. 
+```JavaScript
+console.log(Object.keys(euge));  // ["nomb", "apellido", "edad", "pasatiemps", "soltera", "contacto", "saludar", "decirNombre"]
+```
+
+**.values** para listar los valores del objeto:
+
+```JavaScript
+console.log(Object.values(euge));
+```
+
+**.hasOwnProperty()** para saber si el objeto tiene determinada propiedad.
+
+```JavaScript
+console.log(euge.hasOwnProperty("nombre"));  // true, porque tiene nombre como propiedad
+console.log(euge.hasOwnProperty("nacimiento"));  // false, porque no tiene nacimeinto como propiedad
+```
+
+---
+
+# :book: Estructuras de control
+
+
+---
+
+## Tipo de operadores
+
+---
+
+## Condicionales
+
+---
+
+## Ciclos
+
+---
+
+## Manejo de errores
+
+---
+
+## Break & continue
+
+---
+
+## Destructuración
+
+---
+
+## Objetos literales
+
+---
+
+## Parámetros RESRT y operador SPREAD
+
+---
+
+## Arrow functions
 
 ---
