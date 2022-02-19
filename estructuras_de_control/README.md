@@ -1,4 +1,4 @@
-## Tipo de operadores: Condicionales
+## :book: Tipo de operadores: Condicionales
 
 **Estructura de control** : mecanismo que permite controlar el flujo de la programción, vamos a tomar ciertas acciones o no dependiendo del resultado de evaluar una condición (que nos va a dar un valor booleano).
 
@@ -150,7 +150,7 @@ Y la opción **default** también es importante, ya que si el valor a evaluar no
 
 ---
 
-## Ciclos (loops)
+## :book: Ciclos (loops)
 
 
 Son estructuras repetitivas, voy a tener un incremento o decremento para que la variable vaya modificando su valor en cada iteración, asi en un momento deje de cumplirse la condición y se rompa el ciclo (sino entro en un loop infinito).
@@ -242,7 +242,7 @@ for (const caracter of cadena) {
 
 ---
 
-## Manejo de errores
+## :book: Manejo de errores
 
 **Try** - **Catch** - **Finally**
 
@@ -292,7 +292,7 @@ Se usa más del lado del Back End, cuando se abre la lectura de una base de dato
 
 ---
 
-## Break & continue
+## :book: Break & continue
 
 El el **switch** para romper cada caso tenemos el **break**, lo que nos hace salir del switch y no evaluar los casos que le siguen (se rompe la estructura).
 
@@ -320,7 +320,7 @@ Son el continue, se puede por ejemplo imprimir solo los núemros pares, los núm
 
 ---
 
-## Destructuración
+## :book: Destructuración
 
 Desde el 2015, con **ES6** tenemos la **destructuración** y es una nueva forma de asignar valores a un **array** o un **objeto**.
 
@@ -378,7 +378,7 @@ console.log(nombre, apellido, edad); // Maria Eugenia Costa 37
 
 ---
 
-## Objetos literales
+## :book: Objetos literales
 
 Sin el objeto literal:
 
@@ -416,7 +416,7 @@ dog.ladrar(); // guauuu guauu guauu !!!
 
 ---
 
-## Parámetros REST y operador SPREAD
+## :book: Parámetros REST y operador SPREAD
 
 **Parámetros REST (...)**
 
@@ -466,7 +466,127 @@ En React JS cuando actualizamos el estado (un objeto que centraliza todos los da
 
 ---
 
-## Arrow functions
+## :book: Arrow functions
 
+Es una nueva forma de **definir funciones anónimas que sean expresadas**, cuando a una variable se le asigna el valor de una expresión anónima. Al ser función expresada no voy a tener hoisting.
+
+Con la **arrow function** se quita la palabra *function* y entre los **()** y las **{}** agregamos **=>**.
+
+Si la función tiene un solo bloque de cósigo, entonces puedo omitir las {}, como en este ejemplo:
+
+```JavaScript
+const saludar = () => console.log(`Hola`);
+saludar();   // Hola
+```
+
+Por eso se ve que es más expresivo.
+
+Ejemplo de una arrow function que recibe **parametros**.
+
+```JavaScript
+const saludar = nombre => console.log(`Hola ${nombre}`);
+saludar("Irma");  // Hola Irma
+```
+
+En el caso de la **arrow function** que **recibe un solo parámetro** ya **no es necesario agregar los ()**. Si recibe más de un pa´rametro o si no recibe ninguno si debe llevar ().
+
+
+Y también es un **return explícito**.
+
+Lo vemos en este ejemplo.
+
+Primero lo veo en una función que no es arrow function:
+
+```JavaScript
+const sumar = function (a, b) {
+  return a + b;
+} 
+```
+
+Ahora con arrow function, con un **return explicito** (evitamos de escribir return):
+
+```JavaScript
+const sumar = (a, b) => a + b;
+console.log(sumar(9, 9));
+```
+
+
+```JavaScript
+const funcionDeVariasLineas = () => {
+  console.log("Uno");
+  console.log("Dos");
+  console.log("Tres");
+}
+funcionDeVariasLineas();  // Uno Dos Tres
+```
+
+Se utilizan al iterar sobre objetos o arrays. Por ejemplo:
+
+```JavaScript
+const numeros = [1, 2, 3, 4, 5];
+numeros.forEach((el, index) => console.log(`El elemento ${el} esta en la posición ${index}`));
+//El elemento 1 esta en la posición 0
+//El elemento 2 esta en la posición 1
+//El elemento 3 esta en la posición 2
+//El elemento 4 esta en la posición 3
+//El elemento 5 esta en la posición 4
+```
+
+Tienen la capacidad de capturar el objeto THIS del contexto en que se encuentra.
+
+```JavaScript
+function Perro() {
+  console.log(this);
+}
+Perro();   // Window {parent: Window, opener: null, to p: Window, length:0, frames: Window, ...}
+```
+
+Pero si en vez de una funcion tengo un objeto:
+
+```JavaScript
+const perro = {
+  nombre: "Pipi",
+  ladrar() {
+    console.log(this)
+  }
+}
+perro.ladrar();  // {nombre: "Pipi", ladrar: f}
+```
+
+En este caso la palabra **this** hace referencia a **mi objeto**.
+
+Pero si tengo una arrow function:
+
+```JavaScript
+const perro = {
+  nombre: "Pipi",
+  ladrar: () => {
+    console.log(this)
+  }
+}
+perro.ladrar();  // Window {parent: Window, opener: null, to p: Window, length:0, frames: Window, ...
+```
+
+El objeto **this** ya no es el objeto, sino vuelve a ser el **objeto window**, el **objeto gloabl**.
+
+
+Las **arrow functions** tienen la capacidad de capturar el contexto del objeto en el que se encuentran, por lo que hay que tener cuidado en utilizar arrow function para declarar metodos dentro de objetos literales.
+
+
+Cuando tenía las funciones anónimas no tenía este detalle:
+
+```JavaScript
+const perro2 = {
+  nombre: "Pipi",
+  ladrar: function() {
+    console.log(this)
+  }
+}
+perro2.ladrar();  // {nombre: "Pipi", ladrar: f}
+```
+
+En cambio la arrow function tiene la capacidad de saltarse el contexto en el que están (en este caso el objeto perro2) y heredar o reconocer el objeto donde se encuentra el objeto padre en el que fue declarado.
+
+Es importante en React al crear un componente basado en clases, y luego se generan métdos que se quieren asociar a algún evento de ese componente hay que enlazar el contexto y se utilizan las arrow functions.
 
 ---
