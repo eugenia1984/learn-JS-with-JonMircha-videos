@@ -1101,7 +1101,39 @@ console.log(nombre, apellido, edad); // Maria Eugenia Costa 37
 
 ## Objetos literales
 
+Sin el objeto literal:
 
+```JavaScript
+let nombre = "Pipi",
+ edad = 10;
+
+const perro = {
+  nombre: nombre,
+  edad: edad,
+  ladrar: function() {
+    console.log("guauuu guauu !!!");
+  }
+} 
+
+conosle.log(perro); // {nombre: "Pipi", edad: 10, ladrad: f}
+perro.ladrad(); // guauuu guauuu !!!
+```
+
+Con el objeto literal:
+
+```JavaScript
+const dog = {
+  nombre,
+  edad,
+  raza: "puro perro",
+  ladrar() {
+    console.log("guauuu guauu guauu !!!");
+  }
+}
+
+console.log(dog); //{nombre: "Pipi", edad: 10, raza: "pero perro", ladrd: f}
+dog.ladrar(); // guauuu guauu guauu !!!
+```
 
 ---
 
