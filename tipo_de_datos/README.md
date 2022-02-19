@@ -1139,6 +1139,52 @@ dog.ladrar(); // guauuu guauu guauu !!!
 
 ## Parámetros REST y operador SPREAD
 
+**Parámetros REST (...)**
+
+Un ejemplo con código, si quiero sumar los números de una rray, pero no se cuantos elementos tengo:
+
+```JavaScript
+function sumar(a,b, ...c) {
+  let resultado = a+b;
+  c.forEach(function (n) {
+    resultado +=n;
+  });
+  return resultado;
+}
+
+console.log(sumar(1, 2)); // 3
+console.log(sumar(1, 2, 3)); // 6
+console.log(sumar(1, 2, 3, 4)); // 10
+console.log(sumar(1, 2, 3, 4, 5)); // 15
+console.log(sumar(1, 2, 3, 4, 5, 6)); // 21
+```
+
+**Operador SPREAD**
+
+Cuando hay que expandir una expresión, proque debemos guardar múltiples elementos; como en el caso de tener un arreglo con cierto numero de elementos pero en un determinaod momento recibe nuevos parametros, y en vez de contatenar o hacer push se agrega con el *spread operator*.
+
+
+Ejmplo en código, teniendo los array arr1 y arr2, tengo que crear una array que sea el resultado de arr1+arr2, o sea crear un nuevo arreglo de 10 posiciones:
+
+```JavaScript
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [6, 7, 8, 9, 0];
+```
+
+Sin el spread operator, si hago:
+
+```JavaScript
+const arr3 = [arr1,arr2];  // (2) [Array(5), Array(5)]
+```
+
+Pero con el Spread Operator:
+
+```JavaScript
+const arr3 = [...arr1, ...arr2];  // (10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+```
+
+En React JS cuando actualizamos el estado (un objeto que centraliza todos los datos de la aplicaicón o del componente en que se está trabajando), y solo afectamos uno se hace una copia del objeto y se le modifica o agrega el nuevo valor del estado.
+
 ---
 
 ## Arrow functions
