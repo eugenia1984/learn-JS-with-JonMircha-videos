@@ -10,9 +10,11 @@ All his code it's [here](https://github.com/jonmircha/youtube-js)
 
 ## What are you going to see ?
 
-- [Learn JavaScript](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/learn_js)
+- [Learn JavaScript](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/aprende_js)
 
-- [Type of data](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/tipo_de_datos)
+- [Type of data](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/tipo_de_datos)
+
+- [Control strucutures](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/estructuras_de_control)
 
 ---
 
@@ -58,9 +60,11 @@ Todo el código del curso está [acá](https://github.com/jonmircha/youtube-js)
 
 ##  Qué vas a ver?
 
-- [Aprende JavaScript](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/learn_js)
+- [Aprende JavaScript](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/aprende_js)
 
-- [Tipo de datos](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/tipo_de_datos)
+- [Tipo de datos](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/tipo_de_datos)
+
+- [Estructuras de control](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/estructuras_de_control)
 
 ---
 
