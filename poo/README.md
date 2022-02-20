@@ -770,6 +770,56 @@ Cuando en React se hace renderizado de componentes dinámicos, que dependiendo d
 
 ## :book: alert, confirm y prompt
 
+
+Todos cuelgan del objeto padre **window** (por eso no existen en Node.js), pero no es necesario invocarlos  así: ```window.alert()```, directamente ```alert()```
+
+Sirven para poder interactuar con el usuario.
+
+
+Para ver la lista de los métodos del objeto window y ver que tiene como funciones: alert, confirm, prompt:
+
+```JavaSCript
+console.log(window);
+```
+
+### Alert
+
+```JavaScript
+alert("Hola esto es una alerta");
+```
+
+Se va a ver el mensaje "Hola este es un aleta" con un **botón de aceptar**
+
+
+### Confirm
+
+```JavaScript
+confirm("Hola esto es una confirmación");
+```
+
+Se va a ver el mensaje "Hola esto es una confirmación" con **dos botones**: **Aceptar** y **Cancelar**.
+
+Y dependiendo de lo que el usuario pulse, va a validar a true o false.
+
+### Prompt
+
+```JavaScript
+prompt("Hola esto es un aviso y le permite al usuario ingresar un valor");
+```
+
+Se va a mostrar el mensaje  "Hola esto es un aviso y le permite al usuario ingresar un valor" y me permite que el usuario interactué, ya que aparece **un input**. y **dos botones**: **Aceptar** y **Cancelar**.
+
+Ahora los guardo en varaibles:
+
+```JavaScript
+let alerta = alert("Hola esto es una alerta"),
+  confirmacion = confirm("Hola esto es una confirmación"),
+  aviso = prompt("Hola esto es un aviso y le permite al usuario ingresar un valor");
+console.log(alerta);  // undefined
+console.log(confirmacion);  // true si hago click en Aceptar - false si hago click en Cancelar
+console.log(aviso);  // puedo tener null si aunque completo el input pero le doy a cancelar. si completo y hago click en Aceptar guarda el valor
+```
+
 ---
 
 ## :book: Expresiones Regulares
