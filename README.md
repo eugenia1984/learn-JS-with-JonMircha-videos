@@ -18,6 +18,10 @@ All his code it's [here](https://github.com/jonmircha/youtube-js)
 
 - [Object Oriented Programming](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/poo)
 
+- [Logic Programming Exercises - code](https://github.com/eugenia1984/JS-exercises)
+
+- [Logic Programming Exercises - web](https://eugenia1984.github.io/JS-exercises/)
+
 ---
 
 ## Tech Stack 🛠️
@@ -69,6 +73,10 @@ Todo el código del curso está [acá](https://github.com/jonmircha/youtube-js)
 - [Estructuras de control](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/estructuras_de_control): IF - ELSE | IF - ELSE IF - ELSE  | OPERADOR TERNARIO | SWITCH CASE | LOOPS (WHILE | DO - WHILE | FOR | FOR IN | FOR OF) | Manejo de errores : Try - Catch - Finally / throw | Break & continue | Destructuración | Objetos literales | Parámetros REST y operador SPREAD | Arrow functions
 
 - [Programacion Orientada a Objetos](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/poo) : Herencia Prototípica  | Sobreescritura de métodos del Prototipo padre en el hijo | Métodos estáticos, getters y setters |  Herencia con constructor, getters y setters | Objetos y Funciones del lenguaje: console , object Date, object Math | Operador de Cortocircuito : OR ,  AND | alert, confirm y prompt | Expresiones Regulares | Funciones Anónimas Autoejecutables | Módulos: import / export
+
+- [Ejercicios de lógica de programación - ver código](https://github.com/eugenia1984/JS-exercises)
+
+- [Ejercicios de lógica de programación - ver en web](https://eugenia1984.github.io/JS-exercises/)
 
 ---
 

@@ -1066,6 +1066,46 @@ no-modulos.js:
 console.log("Mi navegador no soporta Módulos +ES6");
 ```
 
+constantes.js:
+
+```JavaScript
+export const PI = Math.PI;
+
+export let usuario = "Jon";
+
+const password = "qwerty";
+//export default password;
+
+const hello = () => console.log("Hola");
+
+export default function saludar() {
+  console.log("Hola Módulos +ES6");
+}
+
+export class Saludar {
+  constructor() {
+    console.log("Hola Clases +ES6");
+  }
+}
+```
+
+aritmetica.js:
+
+```JavaScript
+function sumar(a, b) {
+  return a + b;
+}
+
+function restar(a, b) {
+  return a - b;
+}
+
+export const aritmetica = {
+  sumar,
+  restar
+};
+```
+
 ---
 
 Recordar el orden en que debemos escribir el código, más al trabajar con módulos:
