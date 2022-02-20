@@ -824,6 +824,133 @@ console.log(aviso);  // puedo tener null si aunque completo el input pero le doy
 
 ## :book: Expresiones Regulares
 
+**Expresiones Regulares** : Son una secuencia de caracteres que forma un patrón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadenas de caracteres.
+
+Links para ampliar el tema:
+
+
+[Definición de Expresiones Regulares en Wikipedia](https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular)
+
+[Definición de Expresiones Regulares en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions)
+
+
+- Se utilizan para valir que se ingreso un cprreo electrónico / DNI válido.
+
+- Están en todos los lenguajes de programación.
+
+
+Ejemplo con código, tengo por ejemplo un texto guardado en la variable **cadena**:
+
+```JavaScript
+let cadena = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fuga cupiditate dolores saepe, praesentium sit eaque recusandae id sapiente similique, laudantium voluptatum perferendis ea iure ad odio doloremque earum voluptate.";
+```
+
+Para buscar con **RegExp** dando un **patrón** y la **bandera**, como en el ejemplo que pongo la bandera **g** de global, asi no se queda con la primer coincidencia y corta, sino que me busca todas:
+
+```JavaScript
+let expReg = new RegExp("lorem", "ig");
+```
+
+Utilizándo el método **.test()**:
+
+```JavaScript
+console.log(expReg.test(cadena));  // true, porque la expresion regular aparece en la cadena
+```
+
+Utilizando el método **.exec()**, que me devuelve un arreglo, me aclara donde lo encuentra, y como es **casesensible** utilizo la bandera **ig** para que me ignore las mayusculas y minusculas :
+
+```JavaScript
+console.log(expReg.exec(cadena));
+let expReg2 = /lorem{1,}/ig;  
+// con ig deja de ser casesensible
+// {1,} lo encuentra al menos una vez, se puede repetir infinitas veces
+//{1,3} se repetiria entre 1 y 3 veces, pongo un rango
+console.log(expReg2.test(cadena));
+console.log(expReg2.exec(cadena));
+```
+
+
+
+**Alternación** : Una barra vertical separa las alternativas, las cuales son evaluadas de izquierda a derecha. Por ejemplo: ``` "amarillo|azul" ``` se corresponde con amarillo o azul.
+
+**Cuantificación**: Un cuantificador tras un carácter especifica la frecuencia con la que este puede ocurrir. Los cuantificadores más comunes son : ``` ? , + y ```.
+
+El signo de interrogación **?** indica que el carácter que le precede puede aparecer como mucho una vez. Por ejemplo: ```ob?scuro``` se corresponde con ```oscuro y obscuro```.
+
+El signo más **+** indica que el carácter que le precede debe aparecer al menos una vez. Por ejemplo, ```ho+la``` describe el conjunto infinito ``` hola, hoola, hooola, hoooola, etcétera ```.
+
+El asterisco * indica que el carácter que le precede puede aparecer cero, una, o más veces. Por ejemplo: ```0*42``` se corresponde con ```42, 042, 0042, 00042, etcétera```.
+
+**Agrupación**: los **paréntesis** pueden usarse para definir el ámbito y precedencia de los demás operadores. Por ejemplo: ```(p|m)adre``` es lo mismo que ```padre|madre```, y ```(des)?amor``` se corresponde con ```amor``` y con ```desamor```.
+
+Los constructores pueden combinarse libremente dentro de la misma expresión, por lo que ```H(ae?|ä)ndel``` equivale a ```H(a|ae|ä)ndel```. La sintaxis precisa de las expresiones regulares cambia según las herramientas y aplicaciones consideradas.
+
+
+**El punto** : **.**, sl punto se interpreta por el motor de búsqueda como "cualquier carácter", es decir, busca cualquier carácter incluyendo los saltos de línea. 
+
+**El signo de admiración**:  **!**, se utiliza para realizar una "búsqueda anticipada negativa". La construcción de la expresión regular es con el par de paréntesis, el paréntesis de apertura seguido de un signo de interrogación y un signo de exclamación. Dentro de la búsqueda tenemos la expresión regular. Por ejemplo, para excluir exactamente una palabra, habrá que utilizar ```^(palabra.+|(?!palabra).*)$```
+
+**La barra inversa o contrabarra**: \, se utiliza para escapar el siguiente carácter de la expresión de búsqueda de forma que este adquiera un significado especial o deje de tenerlo. O sea, la barra inversa no se utiliza nunca por sí sola, sino en combinación con otros caracteres. 
+
+```
+| expresion | representacion |
+| --------- | -------------- |
+| \t | un tabulador |
+| \r | el "retorno de carro" o "regreso al inicio" o sea el lugar en que la línea vuelve a iniciar |
+| \n | la "nueva línea" el carácter por medio del cual una línea da inicio. Es necesario recordar que en Windows es necesaria una combinación de \r\n para comenzar una nueva línea, mientras que en Unix solamente se usa \n y en Mac_OS clásico se usa solamente \r |
+| \a | una "campana" o "beep" que se produce al imprimir este carácter |
+| \e | la tecla "Esc" o "Escape" |
+| \f |  un salto de página |
+| \v | un tabulador vertical |
+| \x | Se utiliza para representar caracteres ASCII o ANSI si conoce su código. De esta forma, si se busca el símbolo de derechos de autor y la fuente en la que se busca utiliza el conjunto de caracteres latín-1 es posible encontrarlo utilizando \xA9".
+| \u | Se utiliza para representar caracteres Unicode si se conoce su código. "| \u00A2" representa el símbolo de centavos. No todos los motores de Expresiones Regulares soportan Unicode. El .Net Framework lo hace, pero el EditPad Pro no, por ejemplo |
+| \d | Representa un dígito del 0 al 9 |
+| \w | Representa cualquier carácter alfanumérico |
+| \s | Representa un espacio en blanco |
+| \D | Representa cualquier carácter que no sea un dígito del 0 al 9 |
+| \W | Representa cualquier carácter no alfanumérico |
+| \S | Representa cualquier carácter que no sea un espacio en blanco |
+| \A | Representa el inicio de la cadena | No un carácter sino una posición |
+| \Z | Representa el final de la cadena | No un carácter sino una posición |
+| \b | Marca la posición de una palabra limitada por espacios en blanco, puntuación o el inicio/final de una cadena |
+| \B | Marca la posición entre dos caracteres alfanuméricos o dos no-alfanuméricos |
+```
+
+**Los corchetes**: **[]**  en el lenguaje de las expresiones regulares es representar "clases de caracteres", o sea, agrupar caracteres en grupos o clases. Son útiles cuando es necesario buscar uno de un grupo de caracteres. Dentro de los corchetes es posible utilizar el guion "-" para especificar rangos de caracteres.
+
+**La barra** : **|**, sirve para indicar una de varias opciones. Por ejemplo, la expresión regular "a|e" encontrará cualquier "a" o "e" dentro del texto. La expresión regular "este|oeste|norte|sur" permitirá encontrar cualquiera de los nombres de los puntos cardinales. La barra se utiliza comúnmente en conjunto con otros caracteres especiales.
+
+**El signo de dólar**: *$*, representa el final de la cadena de caracteres o el final de la línea, si se utiliza el modo multi-línea. No representa un carácter en especial sino una posición. Si se utiliza la expresión regular "\.$" el motor encontrará todos los lugares donde un punto finalice la línea, lo que es útil para avanzar entre párrafos.
+
+**El acento circunflejo**: **^**, este carácter tiene una doble funcionalidad, que difiere cuando se utiliza individualmente y cuando se utiliza en conjunto con otros caracteres especiales
+
+**Los paréntesis**: **()**, de forma similar que los corchetes, los paréntesis sirven para agrupar caracteres, sin embargo existen varias diferencias fundamentales entre los grupos establecidos por medio de corchetes y los grupos establecidos por paréntesis:
+
+- Los caracteres especiales conservan su significado dentro de los paréntesis.
+
+- Los grupos establecidos con paréntesis establecen una "etiqueta" o "punto de referencia" para el motor de búsqueda que puede ser utilizada posteriormente como se denota más adelante.
+
+- Utilizados en conjunto con la barra "|" permite hacer búsquedas opcionales. Por ejemplo la expresión regular "al (este|oeste|norte|sur) de" permite buscar textos que den indicaciones por medio de puntos cardinales, mientras que la expresión regular "este|oeste|norte|sur" encontraría "este" en la palabra "esteban", no pudiendo cumplir con este propósito.
+
+- Utilizados en conjunto con otros caracteres especiales que se detallan posteriormente, ofrece funcionalidad adicional.
+
+**El signo de interrogación**: **?**, tiene varias funciones dentro del lenguaje de las expresiones regulares. La primera de ellas es especificar que una parte de la búsqueda es opcional. Por ejemplo, la expresión regular ```ob?scuridad``` permite encontrar tanto ```oscuridad``` como ```obscuridad```. 
+
+**Las llaves**: **{}**, comúnmente las llaves son caracteres literales cuando se utilizan por separado en una expresión regular. Para que adquieran su función de metacaracteres es necesario que encierren uno o varios números separados por coma y que estén colocados a la derecha de otra expresión regular de la siguiente forma: ```\d{2}``` Esta expresión le dice al motor de búsqueda que encuentre dos dígitos contiguos. Utilizando esta fórmula podríamos convertir el ejemplo ```^\d\d/\d\d/\d\d\d\d$``` que servía para validar un formato de fecha en ```^\d{2}/\d{2}/\d{4}$``` para una mayor claridad en la lectura de la expresión.
+
+```\d{2,4}``` Esta forma añade un segundo número separado por una coma, el cual indica al motor de búsqueda que como máximo debe aparecer 4 veces la expresión regular \d. Los posibles valores son:
+
+```^\d\d$``` (mínimo 2 repeticiones)
+
+```^\d\d\d$```(tiene 3 repeticiones, por lo tanto entra en el rango 2-4)
+
+```^\d\d\d\d$``` (máximo 4 repeticiones)
+
+
+**El asterisco**: *, sirve para encontrar algo que se encuentra repetido 0 o más veces. Por ejemplo, utilizando la expresión ```[a-zA-Z]\d*``` será posible encontrar tanto "H" como "H1", "H01", "H100" y "H1000", es decir, una letra seguida de un número indefinido de dígitos.
+
+**El signo de suma**: +, se utiliza para encontrar una cadena que se encuentre repetida una o más veces. A diferencia del asterisco, la expresión ```[a-zA-Z]\d+``` encontrará "H1" pero no encontrará "H". 
+
 ---
 
 ## :book: Funciones Anónimas Autoejecutables
