@@ -16,6 +16,8 @@ All his code it's [here](https://github.com/jonmircha/youtube-js)
 
 - [Control strucutures](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/estructuras_de_control)
 
+- [Object Oriented Programming](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/poo)
+
 ---
 
 ## Tech Stack 🛠️
@@ -65,6 +67,8 @@ Todo el código del curso está [acá](https://github.com/jonmircha/youtube-js)
 - [Tipo de datos](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/tipo_de_datos)
 
 - [Estructuras de control](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/estructuras_de_control)
+
+- [Programacion Orientada a Objetos](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/poo)
 
 ---
 
