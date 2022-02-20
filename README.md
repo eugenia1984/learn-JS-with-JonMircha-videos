@@ -5,7 +5,6 @@ ENGLISH
 You will find all my anotations (in spanish) and exercises with JavaScript of the **Jon Mircha**'s YouTube Videos.
 
 
-All his code it's [here](https://github.com/jonmircha/youtube-js)
 ---
 
 ## What are you going to see ?
@@ -28,9 +27,6 @@ All his code it's [here](https://github.com/jonmircha/youtube-js)
 
 **HTML5** , **CSS3** & **JavaScript**
 
----
-
-:tv: You can see the practise [HERE](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/)
 
 ---
 
@@ -59,9 +55,6 @@ SPANISH
 
 Acá voy a dejar las anotaciones y ejercicios de los videos de **Jon Mircha de JavaScript**
 
-
-Todo el código del curso está [acá](https://github.com/jonmircha/youtube-js)
-
 ---
 
 ##  Qué vas a ver?
@@ -86,9 +79,6 @@ Todo el código del curso está [acá](https://github.com/jonmircha/youtube-js)
 
 ---
 
-:tv: Podes ver la práctica [ACA](https://eugenia1984.github.io/learn-JS-with-JonMircha-videos/)
-
----
 
 ## Por favor: 🎁
 
