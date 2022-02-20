@@ -1,4 +1,8 @@
-# Programación Orientada a Objetos
+# :star: Programación Orientada a Objetos
+
+---
+
+## :book: POO
 
 JavaScript es un lenguaje **multiparadigma**, se pueden utilizar distintos paradigmas de programación (programación funcional, programación orientada a objetos, programación orientada a eventos).
 
@@ -116,28 +120,30 @@ Animal.prototype.saludar = function () {
 ```
 ---
 
-## :book:  Herencia
-#### Herencia Prototípica (super):
+## :book:  Herencia Prototípica 
 
-Perro hereda de Animal, y animal hereda del objeto Object (que es el más general de JavaScript).
+**Herencia** -> el hijo hereda los atributos y metodos del padre.
+
+- *Perro* hereda de *Animal*
+
+- Animal hereda del objeto *Object* (que es el más general de JavaScript).
 
 ```JavaScript
 function Perro(nombre, genero, tamanio) {
-  this.super = Animal;
+  this.super = Animal;  // el elemento padre de Perro es Animal
   this.super(nombre, genero);  // son atributos heredados del padre Animal
-  this.tamanio = tamanio; // es un atributo propio del objeto Perro
+  this.tamanio = tamanio; // es un atributo propio del objeto Perro, no lo tiene Animal
 } 
 ```
 
-Perro está heredando de Animal
+Perro está heredando de Animal, pero lo que hay que hacer es reasignar al prototipo de Perro que sea una instancia de animal ( sino me pasa como antes tenía los métdoos duplicados)
 
 ```JavaScript
-Perro.prototype = new Animal();
-Perro.prototype.constructor = Perro; 
+Perro.prototype = new Animal();  // Perro está heredando de Animal
+Perro.prototype.constructor = Perro;  // Le generosu propio constructor
 ```
 
-Sobreescritura de métodos del Prototipo padre en el hijo
-
+### Sobreescritura de métodos del Prototipo padre en el hijo
 
 ```JavaScript
   Perro.prototype.sonar = function () {
@@ -160,13 +166,14 @@ lolaBunny.sonar();
 lolaBunny.saludar(); 
 ```
 
-
-
-
 ---
 
 ## :book:  Métodos estáticos, getters y setters
 
+
+---
+
+# :star: Objetos y Funciones del lenguaje
 
 ---
 
