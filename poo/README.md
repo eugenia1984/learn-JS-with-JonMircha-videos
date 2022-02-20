@@ -487,6 +487,159 @@ console.assert(x < y, { x, y, pruebaXY });
 
 ## :book: Objeto Date 
 
+Para la hora local: ``` DiaDeLaSemana MesDelAnio NumeroDeDia HoraConHora:Minuto:Segundos EnQueUsoHorarioDElGMTEstoy ```
+
+
+```JavaScript
+console.log(Date());  
+```
+
+Me la guardo en una variable **fecha**:
+
+```JavaScript
+let fecha = new Date();
+console.log(fecha);
+```
+
+Para ver el **día del mes**:
+
+```JavaScript
+console.log(fecha.getDate());
+```
+
+Para ver **el día de la semana**:
+
+Observación, empieza desde 0: 
+
+D L M Mi J V S -> 0 1 2 3 4 5 6 
+
+```JavaScript
+console.log(fecha.getDay());
+```
+
+Para obtener el **mes**:
+
+Observacion, empieza en 0: 
+
+Ene Feb Mar Abr May Jun Jul Ago Sep Oct Nov Dic -> 0 1 2 3 4 5 6 7 8 9 10 11
+
+
+```JavaScript
+console.log(fecha.getMonth());
+```
+
+Para obtener el **año**:
+
+```JavaScript
+console.log(fecha.getYear());  // 122 considera desde 1900 cuantos años pasaron
+console.log(fecha.getFullYear()); // 2022 - este metodo es mejor utilizar
+```
+
+Para obtener la **hora**:
+
+```JavaScript
+console.log(fecha.getHours()); // 12 - en formato de 0 a 23
+```
+
+Para obtener los **minutos**:
+```JavaScript
+console.log(fecha.getMinutes()); // 19
+```
+
+Para obtener los **segundos**:
+```JavaScript
+console.log(fecha.getSeconds());  //10
+```
+
+Para obtener los **milisegundos**:
+```JavaScript
+console.log(fecha.getMilliseconds());  //715
+```
+
+Similar a new Date, pero para entender más fácil:
+
+```JavaScript
+console.log(fecha.toString());
+```
+
+Para ver solo la fecha: 
+```JavaScript
+console.log(fecha.toDateString());  // Thu Feb 02 2022 12:19:20 GMT-0003 (hora stándar central)
+```
+
+Para ver  la **hora local**:
+
+```JavaScript
+console.log(fecha.toLocaleString());  //Thu Feb 02 2022 12:19:20
+```
+
+Para solo ver **fecha**
+```JavaScript
+console.log(fecha.toLocaleDateString()); // 20/02/2022
+```
+
+Para solo ver **hora**:
+
+```JavaScript
+console.log(fecha.toLocaleTimeString()); // 12:19:20
+```
+
+Para ver el uso horario en que nos encontramos, en minutos:
+
+```JavaScript
+console.log(fecha.getTimezoneOffset());
+```
+
+Para ver la fecha de UTC0 - Meridiano de Greenwich:
+
+```JavaScript
+console.log(fecha.getUTCDate());
+```
+
+Para ver la hora de UTC0 - Meridiano de Greenwich:
+
+```JavaScript
+console.log(fecha.getUTCHours());
+```
+
+
+La fecha en formato Time Stamp, utilizando el constructor Date, son cuántos segundos pasan desde el 1 de Enero de 1970, que es la fecha Time Stamp (se usa para guardar fechas en Base de datos):
+
+```JavaScript
+console.log(Date.now());
+```
+
+Pra obetener el Time Stamp de mi fecha de nacimiento, me lo guardo en una variable que va a tener como parametros año, mes, fecha:
+
+```JavaScript
+let cumpleEuge = new Date(1984, 8, 1);
+console.log(cumpleEEuge);
+```
+
+Y haciendo la difernecia con el Time Stamp averiguo mi edad.
+
+- Hay una librería, **Moment.js** que calcula cuanto tiempo pasó, ya sea horas, días, meses, etc.
+
 ---
 
 ## :book:  Objeto Math
+
+---
+
+## :book: Operador de Cortocircuito
+
+---
+
+## :book: alert, confirm y prompt
+
+---
+
+## :book: Expresiones Regulares
+
+---
+
+## :book: Funciones Anónimas Autoejecutables
+
+---
+
+## :book: Módulos: import / export
