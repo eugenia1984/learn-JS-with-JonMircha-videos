@@ -204,11 +204,15 @@ console.log(scooby));
 
 ### :book: Herencia con constructor, getters y setters
 
-- Se utiliza la palabra reservada *extends*.
+- En JavaScript no se pueden crear métodos privados (que se pueden utilizar solo dentro de la clase). En JavaScript todas las clases son **públicas**.
 
-- Con el método super() se manda a llamar el constructor de la clase padre.
+- Se utiliza la palabra reservada */extends** para aplicar herencia.
 
-- Los setters y getters son métodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase.
+- Con el método **super()** se manda a llamar el constructor de la clase padre.
+
+- Los **setters** y **getters** son métodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase, pero JavaScript los convierte a propiedades, por eso la invocarlos se hace como atributo, no como método, no se usan los ().
+
+- Un **método estático** se pueden ejecutar sin necesidad de instanciar la clase
 
 ```JavaScript
 class Perro extends Animal {
@@ -223,15 +227,15 @@ class Perro extends Animal {
   ladrar() {   // sobreescritura de metodo heredado del objeto padre
     console.log("Guauuu Guauuu!!!");
   }
-  //un método estático se pueden ejecutar sin necesidad de instanciar la clase
+  // método estático
   static queEres() {
     console.log("Los perros somos animales mamíferos que pertenecemos a la familia de los caninos. Somos considerados los mejores amigos del hombre.");
   }
-  // Getters y Setters
-  get getRaza() {
+  // Geter y Seter para el atributo raza
+  get getRaza() { // para obtener el valor de la propiedad (atributo)
     return this.raza;
   }
-  set setRaza(raza) {
+  set setRaza(raza) { // para modificar el valor de la propiedad (atributo)
     this.raza = raza;
   }
 }
@@ -248,10 +252,13 @@ console.log(scooby);
 scooby.saludar();
 scooby.sonar();
 scooby.ladrar();  // metodo propio del Perro
-console.log(scooby.getRaza);
+console.log(scooby.getRaza);  // como es metodo obtenedor, JS lo convierte a propiedad, por lo que se trata como atributo, no como metodo, por eso no uso los ()
 scooby.setRaza = "Grán Danés";
 console.log(scooby.getRaza);
 ```
+
+
+- JavaScript no tiene los modificadores de acceso: public, static y protected, porque todas las clase son publicas.
 
 ---
 
@@ -260,6 +267,221 @@ console.log(scooby.getRaza);
 ---
 
 ## :book:  Objeto console
+
+```JavaScript
+console.log(console);
+console.error("Esto es un error");  // se ve con  x y en rojo
+console.warn("Esto es un aviso"); // se ve con ! en amarillo
+console.info("Esto es un mensaje informativo");  // similar al log, pero informativo
+console.log("Un registro de lo que ha pasado en nuestra aplicación");
+```
+
+Todos estos métodos pueden recibir parámetros (que pueden ser variables). Y si entre los () separamos con como, se puede pasar más de un parámetro.
+
+```JavaScript
+let nombre = "Maria Eugenia",
+  apellido = "Costa",
+  edad = 37;
+console.log(nombre);  // Maria Eugenia
+console.log(apellido); // Costa
+console.log(edad); // 37
+console.log(nombre, apellido, edad); // Maria Eugenia Costa 37
+```
+
+Tamibén puedo usar Template String
+
+```JavaScript
+console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años.`); // Hola mi nombre es Maria Eugenia y tengo 37 años
+```
+
+Y también puedo utilizar String format ( %s -> String | %d -> Number)
+
+```JavaScript
+console.log(`Hola mi nombre es %s %s y tengo %d años.`, nombre, apellido, edad);
+```
+
+Para **limpiar** la consola:
+
+```JavaScript
+console.clear();
+```
+
+Para ver el objecto window:
+
+```JavasCript
+console.log(window);
+```
+
+Para ver el objeto document, la representación del objeto html a través de JavaScript, y mediante los *nodos* podemos acceder a las etiquetas de html.
+
+```JavaScript
+console.log(document);
+```
+
+Con **console.dir()** veo todos los métodos y atributos
+
+```JavaScript
+console.dir(window);
+console.dir(document);
+```
+
+Con **console.group()** formo grupos:
+
+```JavaScript
+console.group("Cursos de @jonmircha en YouTube");
+console.log("Curso de JavaScript");
+console.log("Curso de PWAs");
+console.log("Curso de Flexbox");
+console.log("Curso de Diseño y Programación Web");
+console.groupEnd();
+// v Cursos de @jonmircha en Youtube
+//     Curso de JavaScript
+//     Curso de PWAs
+//     Curso de Flexbox
+//     Curso de Diseño y Programación Web
+```
+
+Con **console.groupCollapsed** la flecha está hacia la derecha y puedo colapsarlo o no
+
+```JavaScript
+console.groupCollapsed("Cursos de @jonmircha en YouTube");
+console.log("Curso de Node.js");
+console.log("Curso de PWAs");
+console.log("Curso de Flexbox");
+console.log("Curso de Diseño y Programación Web");
+console.groupEnd();
+```
+
+Con **console.table** lo represento como tabla, con **sort** los ordeno alfabéticamente de forma ascendente:
+
+```JavaScript
+console.log(console);
+console.table(Object.entries(console).sort());
+// console {debug: f, error: f, info: f, log: f, ...}
+```
+
+Lo veo como tabla:
+
+```
+| (index) | 0 | 1 |
+| ------- | - | - |
+| 0 | "debug" | f |
+| 1 | "error" | f |
+| 2 | "info" | f |
+```
+
+Para representar un objeto o array en forma de tabla:
+
+```JavaScript
+const numeros = [1, 2, 3, 4, 5],
+  vocales = ["a", "e", "i", "o", "u"];
+```
+
+```JavaScript
+console.table(numeros);
+```
+
+```
+| (index) | Value |
+| ------- | ----- |
+| 1 | 1 |
+| 2 | 2 |
+| 3 | 3 |
+| 4 | 4 |
+| 5 | 5 |
+```
+
+```JavaScript
+console.table(vocales);
+```
+
+
+```
+| (index) | Value |
+| ------- | ----- |
+| 1 | "a" |
+| 2 | "e" |
+| 3 | "i" |
+| 4 | "o" |
+| 5 | "u" |
+```
+
+Para los objetos : 
+
+```JavaScript
+const perro = {
+  nombre: "Boni",
+  raza: "Boxer",
+  color: "cafe"
+}
+```
+
+```JavaSCript
+console.table(perro);
+```
+
+Voy a ver la propiedad y el valor:
+
+```
+| (index) | Value |
+| ------- | ----- |
+| nombre | "Boni" |
+| raza | "Boxer" |
+| color | "cafe" |
+```
+
+Para calcular el rendimiento de una aplicación se puede utilizar el método **.time()** y **.timeEnd().
+
+- lo que agrego como mensaje (bandera) en **.time()** y en **.timeEnd** debe ser igual.
+
+```JavaScript
+console.time('Cuanto tiempo tarda mi código');
+const arreglo = Array(1000000);  // establezco la dimension del array, pero con posiciones vacias
+
+for (let i = 0; i < arreglo.length; i++) { // a cada posicion (elemento) del array le asigno un valor
+  arreglo[i] = i;
+}
+console.timeEnd('Cuanto tiempo tarda mi código');
+```
+
+En consola veo: ```Cuanto tiempo tarda mi codigo: 32.076171875ms```
+
+Para saber cuantas veces se ejecuto un fragmento de código, con **console.count()**, para ver por ejemplo cuantas veces el usuario le hace click a un botón o cuantas peticiones hace para llegar a cierta solicitud, por ejemplo.
+
+```JavaScript
+for (let i = 0; i <= 5; i++) {
+  console.count("código for");
+  console.log(i);
+}
+```
+
+```
+0
+codigo for: 1
+1
+codigo for: 2
+2
+codigo for: 3
+3
+codigo for: 4
+4
+codigo for: 5
+```
+
+**.assert()** es como una minilibrería para realizar pruebas.
+
+```conosle.assert( <condicion>, {<variables>};)```
+
+Ejemplo en código, espero que X siempre sea menor que Y:
+
+```JavaScript
+let x = 3,
+  y = 2,
+  pruebaXY = "Se espera que X siempre sea menor que Y";
+console.assert(x < y, { x, y, pruebaXY }); 
+// Assertion failes:
+// {w: 3, y: 2, pruebaXY: "Se espera que X siempre sea menor que Y"}
+```
 
 ---
 
