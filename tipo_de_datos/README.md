@@ -633,7 +633,7 @@ console.log(a);
 console.log(modulo);
 ```
 
-### Operadores Relacionales: 
+### Operadores Relacionales 
 
 mayor que: >
 

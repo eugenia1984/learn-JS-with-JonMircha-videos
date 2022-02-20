@@ -700,6 +700,72 @@ console.log(Math.round(Math.random() * 1000));
 
 ## :book: Operador de Cortocircuito
 
+
+Gracias a los parámetros por defecto, ya no tenemos el inconveneitne de Undefined.
+
+```JavaScript
+function saludar(nombre) {
+  nombre = nombre || "Desconocido";
+  console.log(`Hola ${nombre}`);
+}
+
+saludar("Euge"); // Hola Euge
+saludar();  // Hola Desconocido
+```
+
+
+Pero, antes de los parámetros por defecto, se utilizaba el *operador de cortocircuito*, recordr el uso de los truthy y falsy.
+
+Sería en una asignación de variable, pero ahora para que sea más rápido lo hacemos en el console.log():
+### OR
+
+**Cortocircuito OR** -> cuando el valor de la izquierda en la expresión siempre pueda validar a true, es el valor que se cargará por defecto
+
+
+
+```JavaScript
+//truthy
+console.log("cadena" || "Valor de la derecha");  // cadena
+console.log(19 || "Valor de la derecha");  // 19
+console.log(true || "Valor de la derecha");  // true
+console.log([] || "Valor de la derecha");  // []
+console.log({} || "Valor de la derecha");  // {}
+//Falsy
+console.log(false || "Valor de la derecha");  // Valor de la derecha
+console.log(null || "Valor de la derecha");  // Valor de la derecha
+console.log(undefined || "Valor de la derecha");  // Valor de la derecha
+console.log("" || "Valor de la derecha");  // Valor de la derecha
+console.log(-2 || "Valor de la derecha");   -2
+console.log(0 || "Valor de la derecha");   // Valor de la derecha
+```
+
+### AND 
+
+
+**Cortocircuito AND** -> cuando el valor de la izquierda en la expresión siempre pueda validar a false, es el valor que se cargará por defecto
+
+
+Sería en una asignación de variable, pero ahora para que sea más rápido lo hacemos en el console.log():
+
+```JavaScript
+console.log("cadena" && "Valor de la derecha");  // Valor de la derecha
+console.log(19 && "Valor de la derecha");  // Valor de la derecha
+console.log(true && "Valor de la derecha");  // Valor de la derecha
+console.log([] && "Valor de la derecha");  // Valor de la derecha
+console.log({} && "Valor de la derecha");   // Valor de la derecha
+
+
+console.log(false && "Valor de la derecha");  // false
+console.log(null && "Valor de la derecha");  // null
+console.log(undefined && "Valor de la derecha");  // undefined
+console.log("" && "Valor de la derecha");  //
+console.log(-2 && "Valor de la derecha");  // valor de la derecha
+console.log(0 && "Valor de la derecha");  // 0
+```
+
+
+Cuando en React se hace renderizado de componentes dinámicos, que dependiendo del valor de uno o de otro cargas un componente u otro, se pueden aplicar los cortocircuitos.
+
 ---
 
 ## :book: alert, confirm y prompt

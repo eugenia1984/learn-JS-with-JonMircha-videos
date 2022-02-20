@@ -62,13 +62,13 @@ Todo el código del curso está [acá](https://github.com/jonmircha/youtube-js)
 
 ##  Qué vas a ver?
 
-- [Aprende JavaScript](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/aprende_js)
+- [Aprende JavaScript](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/aprende_js): Un poco de historia | Características y gramática de JS |  Escritura de código | Palabras reservadas | Ordenamiento de código | Nombramos los tipos de datos
 
-- [Tipo de datos](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/tipo_de_datos)
+- [Tipo de datos](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/tipo_de_datos) : Variables vs. Let | Comentarios | Maneras de poder ver el código e ir 'debugueando' | Constantes | Cadenas de Texto (Strings) |  Template Strings | Numbers | Booleans |  Undefined, null & NaN  | Objetos complejos -Funciones, Arrays, Objects- | Estructuras de control -Operadores Aritméticos , Operadores Relacionales , Incremento - Decremento , Operador unario , Operadores Lógicos- 
 
-- [Estructuras de control](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/estructuras_de_control)
+- [Estructuras de control](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/estructuras_de_control): IF - ELSE | IF - ELSE IF - ELSE  | OPERADOR TERNARIO | SWITCH CASE | LOOPS (WHILE | DO - WHILE | FOR | FOR IN | FOR OF) | Manejo de errores : Try - Catch - Finally / throw | Break & continue | Destructuración | Objetos literales | Parámetros REST y operador SPREAD | Arrow functions
 
-- [Programacion Orientada a Objetos](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/poo)
+- [Programacion Orientada a Objetos](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/poo) : Herencia Prototípica  | Sobreescritura de métodos del Prototipo padre en el hijo | Métodos estáticos, getters y setters |  Herencia con constructor, getters y setters | Objetos y Funciones del lenguaje: console , object Date, object Math | Operador de Cortocircuito : OR ,  AND | alert, confirm y prompt | Expresiones Regulares | Funciones Anónimas Autoejecutables | Módulos: import / export
 
 ---
 
