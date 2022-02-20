@@ -624,6 +624,78 @@ Y haciendo la difernecia con el Time Stamp averiguo mi edad.
 
 ## :book:  Objeto Math
 
+Ayuda cuando hay que hacer operaciones matemáticas especiales.
+
+Para ver todos sus métodos:
+
+```JavaScript
+console.log(Math);
+```
+
+Trae como propiedades, algunos números fijos, como por ejemplo PI (está en mayúsuclas, por ser una constante):
+
+```JavaScript
+console.log(Math.PI);
+```
+
+Para calcular el valor absoluto, la cantidad como tal del número, sin considerar si es positivo o negativo -> **.abs()**
+
+```JavaScript
+console.log(Math.abs(-7.8));  // 7.8
+```
+
+Para redondear al número entero posterior inmediato (hacia arriba) -> **.ceil()**
+
+```JavaScript
+console.log(Math.ceil(7.2));  // 8
+```
+
+Para redondear al número inmediato entero menor (hacia abajo) -> **.floor()**
+
+```JavaScript
+console.log(Math.floor(7.8)); // 7
+```
+
+Para redondear al más cercano inmediato (redondea de a 0.50) -> **.round()**
+
+```JavaScript
+console.log(Math.round(7.49));
+```
+
+Se puede sacar la raiz cuadrada de un número -> **.sqrt()**
+
+```JavaScript
+console.log(Math.sqrt(81));  // 9
+```
+
+Para elevar potencias -> **.pow(base, expoennte)**
+
+```JavaScript
+console.log(Math.pow(2, 5));  // 2 x 2 x 2 x 2 x 2 = 32
+```
+
+Para indicar si el valor es positivo, negativo o cero -> **.sign()**
+
+Los valores que me muestra son: **-1** si es negativo /  **0** si es cero / **1** si es un positivo
+```JavaScript
+console.log(Math.sign(-0.3)); // -1 
+console.log(Math.sign(0.3)); // 1
+console.log(Math.sign(0)); // 0  
+```
+
+Para obtener un valor aleatorio comprendido entre (0, 1) -> **.random()**
+
+```JavaScript
+console.log(Math.random());
+```
+
+
+Si por ejemplo necesito un número aleatorio entre 0 y 1000, utilizo **.random()** y lo multiplica por 1000, y para tener un número entero le aplico **.round()**:
+
+```JavaScript
+console.log(Math.round(Math.random() * 1000));
+```
+
 ---
 
 ## :book: Operador de Cortocircuito
