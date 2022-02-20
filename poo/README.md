@@ -955,6 +955,127 @@ Los constructores pueden combinarse libremente dentro de la misma expresión, po
 
 ## :book: Funciones Anónimas Autoejecutables
 
+Es una función en la que se engloba todo el código que se quiere ejecutar.
+
+Es la báse de los módulos actuales, se creaba una encapsulación en el código.
+
+No solamente se definen, sino que se ejecutan al momento de nombrarlas. Y está protegido de los efectos secundarios que podría tener la invocación de librería de terceros u oros archivos de programación que tenga, que contengan nombres de variables muy similares.
+
+Y permite pasar parámetros de una manera más amigable.
+
+
+```JavaScript
+(function () {
+  console.log("Mi primer IIFE");
+})();
+(function (d, w, c) {
+  console.log("Mi segunda IIFE");
+  console.log(d);
+  console.log(w);
+  c.log("Este es un console.log")
+})(document, window, console);
+```
+
+## Formas de escribir las funciones Anónimas Autoejecutables :
+
+### Clásica
+
+```JavaScript
+(function () {
+  console.log('versión Clásica')
+})();
+```
+
+### La Crockford (JavaScript The Good Parts)
+
+```JavaScript
+((function () {
+  console.log('versión Crockford')
+})());
+```
+
+### Unaria
+
+```JavaSCript
++function () {
+  console.log('versión Unaria')
+}();
+```
+
+### Facebook
+
+```JavaScript
+!function () {
+  console.log('versión Facebook')
+}(); 
+```
 ---
 
 ## :book: Módulos: import / export
+
+Se pueden mandar a llamar archivos JavaScript desde el HTML a un archivo externo JavaScript.
+
+Por buena práctica invocarlo al final del body, asi primero se carga todo el HTML5 y luego invoca al código en JavaScript. Aunque ahora también se puede invocar en el *head* con el atributo *defer*.
+
+```<script src="js/modulos.js" type="module"></script>``` en la invocación del *script* debo tener **type** = **"module"**.
+
+```<script src="js/no-modulos.js" nomodule></script>``` con **nomudule** me lo carga si no es modulo, es para que no se me carguen ambos. Es para los navegadores modernos, que sí soportan los módulos.
+
+---
+
+Ejemplo con código: 
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulos en JavaScript</title>
+</head>
+
+<body>
+  <h1>Módulos en JavaScript</h1>
+  <script src="js/modulos.js" type="module"></script>
+  <script src="js/no-modulos.js" nomodule></script>
+</body>
+
+</html>
+```
+
+modulos.js:
+
+```JavaScript
+import saludar, { Saludar, PI, usuario } from "./constantes.js";
+import { aritmetica as calculos } from "./aritmetica.js";
+
+console.log("Archivo modulos.js");
+console.log(PI, usuario);
+//console.log(aritmetica.sumar(3, 4));
+console.log(calculos.sumar(3, 4));
+console.log(calculos.restar(3, 4));
+saludar();
+let saludo = new Saludar();
+saludo;
+```
+
+no-modulos.js:
+
+```JavaScript
+console.log("Mi navegador no soporta Módulos +ES6");
+```
+
+---
+
+Recordar el orden en que debemos escribir el código, más al trabajar con módulos:
+
+1- importación de módulos
+
+2- declaración de variables
+
+3- declaración de funciones
+
+4- ejecución de código
+
+---
