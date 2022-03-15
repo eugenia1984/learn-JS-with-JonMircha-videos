@@ -117,7 +117,7 @@ Esto pasa porque en los *valores compuestos* no estamos accediendo a un valor de
 Se crea con el constructor ```new String(cadena)```
 
 ```JavaScript
-Declaracion con constructor
+//Declaracion con constructor
 let saludo = new String("Hola mundo");
 ```
 
@@ -379,18 +379,20 @@ Al tener la palabra return me retorna el 19 e ignora todas las líneas de códig
 function saludar(nombre = "Desconocido", edad = 0) {
    console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
 } 
+```
+
 
 ```JavaScript
  añossaludar("kEnAi", 7); // Hola mi nombre es KenAi y tengo 
 saludar();  // Hola mo nimbre es Desconocido y tengo  años
 ```
 
-- Funciones declaradas VS funciones expresadas
+- **Funciones declaradas** VS **funciones expresadas**
 
 
 **Función declarada** -> puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada . Hay **hoisting** de la función, es decir me la eleva al principio, donde declaro 1ro variables y luego funciones.
 
-Si somos ordenados y tenemos el cósigo ordenado
+Si somos ordenados y tenemos el código ordenado
 
 1- variables
 
@@ -408,7 +410,7 @@ Es muy buena práctica utilizar funciones expresadas.
 
 Se declaran entre corchetes **[]**.
 
-Se los puede declarar tanto con **let** como con **conts**.
+Se los puede declarar tanto con **let** como con **const**.
 
 Forma de declarar un array:
 
@@ -557,9 +559,9 @@ Las propiedades tienen atributos - valor, los valores pueden ser: String, Number
 console.log(euge); // me va a imprimir todo el objeto
 ```
 
-Par acceder a los valores del objeto, puedo utilizar **dot notation** :
+Para acceder a los valores del objeto, puedo utilizar **dot notation** :
 
-````nombre_de_mi_objeto.propiedad```
+```nombre_de_mi_objeto.propiedad```
 
 ```JavaScript
 console.log(euge["nombre"]);

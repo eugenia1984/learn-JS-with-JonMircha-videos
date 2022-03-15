@@ -11,7 +11,7 @@ You will find all my anotations (in spanish) and exercises with JavaScript of th
 
 - [Learn JavaScript](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/aprende_js)
 
-- [Type of data](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/tipo_de_datos)
+- [Type of data](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/tipo_de_datos) You can see the JS file  at [basicos.js](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/js/basicos.js) 
 
 - [Control strucutures](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/estructuras_de_control)
 
@@ -20,6 +20,8 @@ You will find all my anotations (in spanish) and exercises with JavaScript of th
 - [Logic Programming Exercises - code](https://github.com/eugenia1984/JS-exercises)
 
 - [Logic Programming Exercises - web](https://eugenia1984.github.io/JS-exercises/)
+
+- [Asynchronous Programming](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/programacion_asincrona)
 
 ---
 
@@ -61,7 +63,7 @@ Acá voy a dejar las anotaciones y ejercicios de los videos de **Jon Mircha de J
 
 - [Aprende JavaScript](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/aprende_js): Un poco de historia | Características y gramática de JS |  Escritura de código | Palabras reservadas | Ordenamiento de código | Nombramos los tipos de datos
 
-- [Tipo de datos](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/tipo_de_datos) : Variables vs. Let | Comentarios | Maneras de poder ver el código e ir 'debugueando' | Constantes | Cadenas de Texto (Strings) |  Template Strings | Numbers | Booleans |  Undefined, null & NaN  | Objetos complejos -Funciones, Arrays, Objects- | Estructuras de control -Operadores Aritméticos , Operadores Relacionales , Incremento - Decremento , Operador unario , Operadores Lógicos- 
+- [Tipo de datos](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/tipo_de_datos) : Variables vs. Let | Comentarios | Maneras de poder ver el código e ir 'debugueando' | Constantes | Cadenas de Texto (Strings) |  Template Strings | Numbers | Booleans |  Undefined, null & NaN  | Objetos complejos -Funciones, Arrays, Objects- | Estructuras de control -Operadores Aritméticos , Operadores Relacionales , Incremento - Decremento , Operador unario , Operadores Lógicos- Tambien se puede ver en el archivo [basicos.js](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/js/basicos.js) 
 
 - [Estructuras de control](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/estructuras_de_control): IF - ELSE | IF - ELSE IF - ELSE  | OPERADOR TERNARIO | SWITCH CASE | LOOPS (WHILE | DO - WHILE | FOR | FOR IN | FOR OF) | Manejo de errores : Try - Catch - Finally / throw | Break & continue | Destructuración | Objetos literales | Parámetros REST y operador SPREAD | Arrow functions
 
@@ -70,6 +72,9 @@ Acá voy a dejar las anotaciones y ejercicios de los videos de **Jon Mircha de J
 - [Ejercicios de lógica de programación - ver código](https://github.com/eugenia1984/JS-exercises)
 
 - [Ejercicios de lógica de programación - ver en web](https://eugenia1984.github.io/JS-exercises/)
+
+
+- [Programación asíncrona](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/programacion_asincrona)
 
 ---
 
