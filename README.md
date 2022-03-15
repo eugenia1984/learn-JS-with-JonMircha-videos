@@ -21,7 +21,7 @@ You will find all my anotations (in spanish) and exercises with JavaScript of th
 
 - [Logic Programming Exercises - web](https://eugenia1984.github.io/JS-exercises/)
 
-- [Asynchronous Programming](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/programacion_asincrona)
+- [Asynchronous Programming](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/programacion_asincrona) You can see tje JS file at [asincronia.js](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/blob/main/js/asincronia.js) and at the [Jon Mircha´s article](https://jonmircha.com/javascript-asincrono)
 
 ---
 
@@ -74,7 +74,7 @@ Acá voy a dejar las anotaciones y ejercicios de los videos de **Jon Mircha de J
 - [Ejercicios de lógica de programación - ver en web](https://eugenia1984.github.io/JS-exercises/)
 
 
-- [Programación asíncrona](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/programacion_asincrona)
+- [Programación asíncrona](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/tree/main/programacion_asincrona) Podes ver el codigo en el archivo [asincronia.js](https://github.com/eugenia1984/learn-JS-with-JonMircha-videos/blob/main/js/asincronia.js), también en el [articulo que escribio Jon Mircha](https://jonmircha.com/javascript-asincrono)
 
 ---
 
