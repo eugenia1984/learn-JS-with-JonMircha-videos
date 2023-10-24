@@ -42,9 +42,7 @@ You will find all my anotations (in spanish) and exercises with JavaScript of th
 
 ## Notes
 
-I appreciate your interest in this repository ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me on [LinkedIn](http://www.linkedin.com/in/maríaeugeniacosta)
-
-
+I appreciate your interest in this repository ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me on [LinkedIn - maria-eugenia-costa](https://www.linkedin.com/in/maria-eugenia-costa/)
 
 
 ---
@@ -95,4 +93,6 @@ Acá voy a dejar las anotaciones y ejercicios de los videos de **Jon Mircha de J
 
 ## Notas
 
-Aprecio tu interés por este repositorio ⌨️ con ❤️ de [María Eugenia Costa](https://github.com/eugenia1984) 😊 y seguime en [LinkedIn](http://www.linkedin.com/in/maríaeugeniacosta)
+Aprecio tu interés por este repositorio ⌨️ con ❤️ de [María Eugenia Costa](https://github.com/eugenia1984) 😊 y seguime en [LinkedIn - maria-eugenia-costa](https://www.linkedin.com/in/maria-eugenia-costa/)
+
+---
